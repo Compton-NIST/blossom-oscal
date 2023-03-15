@@ -46,8 +46,6 @@ ssp_data = {
     'uuid:party':           Helper.get_uuid(), 
     'uuid:by-component':    Helper.get_uuid(), 
     'uuid:information-type':Helper.get_uuid(), 
-    'uuid:provided':        Helper.get_uuid(), 
-    'uuid:responsibilities':Helper.get_uuid(), 
     'version':              '0.0.1',
     'modified_date':        f"{today}",
 }
@@ -78,6 +76,8 @@ for partial in partials:
         'uuid:statement':       Helper.get_uuid(),
         'uuid:component-uuid':  this_system_component_uuid, 
         'uuid:by-component':    Helper.get_uuid(), 
+        'uuid:provided':        Helper.get_uuid(), 
+        'uuid:responsibilities':Helper.get_uuid()
     }
 
     partial_content = Template.apply(partial_file, uuid_content)
